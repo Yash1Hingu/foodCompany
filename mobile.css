@@ -1,0 +1,55 @@
+@media screen and (max-width:1000px){
+    nav {
+        padding: 10px 2px;
+    }
+
+    header {
+        padding: 0px 10px;
+    }
+    .dropdown {
+        right: 1vw;
+        top: 2vw;
+    }
+    
+    .hero-section {
+        display: block;
+        text-align: center;
+    }
+    .hero-section img {
+        width: 15rem;
+    }
+    
+    .hero-section .text p{
+        width: auto;
+    }
+
+    .yellow {
+        margin-top: 15px;
+    }
+
+    .services {
+        display:block;
+        padding: 4% 5%;
+        margin-top: 20px;
+    }
+
+    .services .card {
+        margin: 20px 0;
+    }
+
+    .dropdown {
+        margin: 7.5vw;
+    }
+
+    .footer-grid {
+        display: block;
+    }
+
+    .footer-grid > div {
+        margin-top: 20px;
+    }
+
+    .footer-grid h4 {
+        margin-bottom: 15px;
+    }
+}

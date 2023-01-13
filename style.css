@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* ==============Nav Bar Section=============== */
+
+nav div {
+    display: inline-block;
+}
+
+nav {
+    position: relative;
+    padding: 2vw 5vw;
+}
+
+.companylogo a {
+    text-decoration: none;
+    position: relative;
+}
+
+.companylogo a span {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.2rem;
+    color: #149F39;
+    margin-top: 24px;
+}
+
+.dropdown .drop-btn {
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.dropdown .drop-btn img {
+    width: 2.5rem;
+    position: relative;
+}
+
+.companylogo a span h2 {
+    display: inline;
+    font-size: 3rem;
+}
+
+nav img {
+    width: 4.5rem;
+}
+
+.dropdown {
+    position: absolute;
+    right: 8vw;
+    top: 4vw;
+}
+
+
+/* ===========Hero Section============= */
+
+.hero-section {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-section .image {
+    padding: 50px;
+    text-align: center;
+}
+
+.hero-section img {
+    width: 30rem;
+    border-radius: 50%;
+}
+
+.hero-section .text .btn {
+    cursor: pointer;
+    border: none;
+    color: #ffffff;
+    padding: 10px 25px;
+    font-weight: 500;
+}
+
+.hero-section .text h1 {
+    font-size: 72px;
+}
+
+.hero-section .text p {
+    font-size: 12px;
+    width: 400px;
+    margin: 1vw 0 2vw 0;
+}
+
+.green {
+    background-color: #149F39;
+    margin: 4.5vw 0 1vw;
+}
+
+.yellow {
+    background-color: #FFC066;
+    font-size: 1.5rem;
+}
+/* ===========Service Section============ */
+.services {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 45px;
+    padding:4% 15%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.services .card {
+    display: grid;
+    grid-template-columns: max-content auto;
+    padding: 10px;
+    grid-gap: 7px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+
+.services .card:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 0px #8da098;
+    transform: scale(1.1);
+    background-color: #149F39;
+    color: whitesmoke;
+}
+
+.services .card .text h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.services .card .text p{
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.services .card img{
+    width: 4.5rem;
+    height: 100%;
+}
+
+/* ===========Main Container============== */
+/* ======Grid Menu Section========= */
+
+main {
+    padding: 5% 2%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+main .btn button{
+    cursor: pointer;
+    border: none;
+    background-color: #149F39;
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-weight: 400;
+}
+
+main .menu h1 {
+    margin-top: 27px;
+    font-weight: 400;
+}
+
+main .menu .menu-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 2vw;
+    position: relative;
+
+    /* Give the Absolute Width and Height to the container menu-grid */
+    width: 75vw;
+    height: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+main .menu .menu-grid .grid1 {
+    background-image: url(images/food-grid-1.jpg);
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+main .menu .menu-grid .grid2 {
+    background-image: url(images/food-grid-2.jpg);
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+main .menu .menu-grid .grid3 {
+    background-image: url(images/food-grid-3.jpg);
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+main .menu .menu-grid .grid4 {
+    background-image: url(images/food-grid-4.jpg);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid5 {
+    background-image: url(images/food-grid-5.jpg);
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid6 {
+    background-image: url(images/food-grid-6.jpg);
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid7 {
+    background-image: url(images/food-grid-7.jpg);
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+
+main .menu .grid-item {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    transition: 0.5s ease-in-out;
+}
+main .menu .grid-item:hover {
+    transform: scale(1.05);
+    border-radius: 15px;
+}
+
+
+/* ====================footer=================== */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+
+    padding: 3% 7% 10%;
+    background-color: #FFF0DB;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-grid .companylogo a span {
+    position: relative;
+}
+
+.footer-grid .companylogo a img{
+    width: 4.5rem;
+}
+.footer-grid .contact .social-logo {
+    position: relative;
+}
+.footer-grid .contact .social-logo > img {
+    width: 1.5rem;
+    margin: 5px 5px 5px 0;
+}
+
+.footer-grid .mainlink a , .footer-grid .support a{
+    display:block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footer-grid h4{
+    color: #565656;
+    margin-bottom: 23px;
+}
+
+.footer-grid .contact input {
+    width: 80%;
+    padding: 2px;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.footer-grid .contact .followlb {
+    margin-top: 23px;
+}
