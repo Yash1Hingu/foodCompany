@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 * {
     margin: 0;
@@ -7,464 +7,297 @@
     box-sizing: border-box;
 }
 
-header .container {
-    padding: 10px 30px;
+body {
+    background-color: #ffffff;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ==============Nav Bar Section=============== */
+
+nav div {
+    display: inline-block;
 }
 
 nav {
-
-    /* For Better Aligment and Formation */
     position: relative;
+    padding: 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #e0e0e0;
 }
-
-nav a img {
-    width: 10rem;
-}
-
-nav .navbar-collapse{
-    position: relative;
-}
-
-nav .navbar-collapse a{
-    /* inline block make a tag in div.navbar-collapse when give padding to a tag it does't go outside the navabr-collapse */
-    display: inline-block;
-    position: relative;
-    font-size: 1.2rem;
-    color: #ff1616;
-    background-color: #ffffff;
-    font-weight: 700;
+.companylogo a {
     text-decoration: none;
-    font-family: 'Cinzel Decorative', cursive;
-    transition: border 1s ease;
-    padding: 1.5vw;
-}
-
-.navbar-collapse .active {
-    /* Which Page Is Active at that moment that show */
-    border-top: 5px solid #ff1616;
-}
-
-nav .navbar-collapse  a:hover {
-    border-top: 5px solid #ff1616;
-}
-
-
-nav .navbar-collapse .icon {
-
-    /* This Icon Show On Mobile Version Drop Down the List */
-    display: none;
-    font-size: 2.2rem;
-    transition: all 1s ease;
-}
-
-nav .navbar-collapse .icon #crossicon {
-
-    /* Style the Crossicon when it convert from menu icon */
-    background-color: #ff1616;
-    color: #ffffff;
-}
-
-@media screen and (max-width: 600px) {
-
-    header .container {
-        padding: 5px 10px;
-    }
-
-
-    /* Not Display And Li item until the responsive class not add */
-    nav .navbar-collapse a {
-        display: none;
-        font-size: 5vw;
-    }
-    
-    nav .navbar-collapse .icon a{ 
-        background-color: transparent;
-        display: block;
-        padding: 7px;
-        font-size: 10vw;
-    }
-    
-    /* Fix the positon at top with brand icon */
-    nav .navbar-collapse .icon{
-        position: absolute;
-        display: block;
-        top: -70px;
-        right: 0;
-    }
-}
-
-
-/* Responsive class add => CSS is change */
-@media screen and (max-width:600px) {
-    nav {
-        display: block;
-    }
-    nav .navbar-collapse.responsive {
-        position: absolute;
-        z-index: 2;
-        width: 100%;
-    }
-    
-    /* Animation when Show The List Items */
-    nav .navbar-collapse.responsive a{
-        /* Take FullWidth of mobile Screen */
-        display: block;
-        animation: scale 0.5s;
-        padding: 5vw;
-    }
-    
-    /* Disable animation on  menu icon */
-    nav .navbar-collapse.responsive span.icon a {
-        animation: none;
-        padding: 1.5vw;
-    }
-}
-
-
-
-/* =============Banner Section========== */
-
-.bcontainer {
     position: relative;
-}
-.banners-container {
-    /* max-width: 1000px; */
-    height: 650px;
-    overflow: hidden;
-    margin: auto;
-    position: relative;
+
     display: flex;
-    justify-content: space-around;
-}
-
-.banners-container .banner {
-    animation: scale 2s ease-in-out;
-    transition: all 2s ease-in-out;
-    display: none;
-    width: 100%;
-}
-.banners-container .banner .back-img{
-    height: 100%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.banners-container .banner .banner-img1 {
-    background-image: url(banners/banner3.jpg);
-}
-.banners-container .banner .banner-img2 {
-    background-image: url(banners/banner2.jpg);
-}
-.banners-container .banner .banner-img3 {
-    background-image: url(banners/banner4.jpg);
-}
-.banners-container .banner .banner-img4 {
-    background-image: url(banners/banner1.jpg);
-}
-
-@keyframes scale {
-    0% {
-        opacity: 0; 
-    }
-    100% {
-        opacity: 1;
-    }
-}
-.banners-container .banner img {
-    width: 100%;
-}
-
-.prev,.next {
-    /* Position*/
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-
-    /* Style */
-    background-color: #ff161690;
-    color: #ffffff;
-    border:none;
-    outline: none;
-    padding: 10px;
-    font-size: 1.8rem;
-    border-radius: 0 5px 5px 0;
-}
-
-.prev {
-    left: 0;
-}
-.next {
-    right: 0;
-    border-radius: 5px 0 0 5px;
-}
-
-.dots {
-    position: absolute;
-    bottom: 30px;
-    left: 47%;
-    display: flex;
-}
-.dot {
-    position: relative;
-    cursor: pointer;
-    display: inline-block;
-    margin: 5px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: 2px solid #808058;
-    transition: all 1s ease-in-out;
-}
-
-.banner .text {
-    left: 10%;
-    display: flex;
-    position: absolute;
+    justify-content: center;
     align-items: center;
-    bottom: 0;
-    height: 100%;
-
-    color: #ffffff;
-    background-color: #ff16166d;
-    font-family: 'Cinzel Decorative', cursive;
-    font-weight:bolder;
-    font-size: 2.2rem;
-    padding: 50px;
 }
 
-.bcontainer .active {
-    background-color: #808058;
-}
-.dot:hover {
-    background-color: #808058;
-}
-
-@media screen and (max-width:600px){
-    .prev,.next  {
-        top: 35%;
-    }
-    .dots {
-        position: absolute;
-        bottom: 10px;
-        left: 40%;
-        display: flex;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-    }
-
-    .banners-container  {
-        height: 500px;
-    }
-
-    .banner .text{
-    display: flex;
-    position: absolute;
-    align-items: center;
-    bottom: 40px;
-    left: 0;
-    font-size: 1.2rem;
-    width: 100%;
-    height: auto;
-    }
-
-    .banner .text p {
-        font-size: 1.5rem;
-    }
-}
-
-
-/* MAIN */
-
-.into-container{
-    padding: 4% 5%;
-    font-size: 1.5vw;
-    line-height: 1.8;
-    text-align: center;
-    font-family: 'Cinzel Decorative', cursiv;
-}
-
-.into-container h1 {
-    color: #ff1616;
+.companylogo a img {
     margin-bottom: 20px;
 }
 
-.into-container p {
-    margin-top: 10px;
+.companylogo a span {
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.2rem;
+    color: #149F39;
 }
 
-@media screen and (max-width:600px){
-    .into-container {
-        font-size: 10px;
-    }
+.dropdown .drop-btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.dropdown {
+    border-radius:50%;
+    padding: 10px;
+    transition: background-color 0.5s ease-in;
+}
+.dropdown:hover{
+    background-color: #87e5a0;
 }
 
-
-.grid-services {
+.dropdown .drop-btn img {
+    width: 2.5rem;
     position: relative;
-    display: flex;
-    justify-content: center;
-    height: 45vw;
-    padding: 3% 7%;
-    background-color: #fc4e4e;
 }
 
-.grid-services .services-container {
+.companylogo a span h2 {
+    display: inline;
+    font-size: 3rem;
+}
+
+nav img {
+    width: 4.5rem;
+}
+
+
+/* ===========Hero Section============= */
+
+.hero-section {
     position: relative;
-    overflow: hidden;
-    width: 40vw;
-    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+}
+
+.hero-section .image {
+    padding: 50px;
+    text-align: center;
+}
+
+.hero-section img {
+    position: relative;
+    width: 70%;
+    border-radius: 50%;
+}
+
+.hero-section .text .btn {
     cursor: pointer;
-    border-radius: 20px;
+    border: none;
+    color: #ffffff;
+    padding: 10px 25px;
+    font-weight: 500;
 }
 
-.grid-services .services-container .services {
-    max-width: 100%;
-    height: 100%;
-    position: relative;
-    transition: all 1s ease;
+.hero-section .text h1 {
+    font-size: 72px;
+}
 
+.hero-section .text p {
+    font-size: 12px;
+    width: 400px;
+    margin: 1vw 0 2vw 0;
+}
+
+.green {
+    background-color: #149F39;
+    margin: 4.5vw 0 1vw;
+}
+
+.yellow {
+    background-color: #FFC066;
+    font-size: 1.5rem;
+}
+/* ===========Service Section============ */
+.services {
+    display: flex;
+    padding:4% 10%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.services .card {
+    display: grid;
+    grid-template-columns: max-content auto;
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 3px;
+    background-color: #149F39;
+    color: whitesmoke;
+}
+
+.services .card .text h4 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.services .card .text p{
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 1.5;
+}
+
+.services .card img{
+    width: 4.5rem;
+    height: 100%;
+}
+
+/* ===========Main Container============== */
+/* ======Grid Menu Section========= */
+
+main {
+    padding: 5% 2%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+main .menu{
+    position: relative;
+    width: 100%;
+}
+main .btn button{
+    cursor: pointer;
+    border: none;
+    background-color: #149F39;
+    font-size: 1.2rem;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-weight: 400;
+}
+
+main .menu h1 {
+    margin-top: 27px;
+    font-weight: 400;
+}
+
+main .menu .menu-grid {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 2vw;
+
+    /* Give the Absolute Width and Height to the container menu-grid */
+    width: 100%;
+    height: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+main .menu .menu-grid .grid1 {
+    background-image: url(images/food-grid-1.jpg);
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+main .menu .menu-grid .grid2 {
+    background-image: url(images/food-grid-2.jpg);
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+main .menu .menu-grid .grid3 {
+    background-image: url(images/food-grid-3.jpg);
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+main .menu .menu-grid .grid4 {
+    background-image: url(images/food-grid-4.jpg);
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid5 {
+    background-image: url(images/food-grid-5.jpg);
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid6 {
+    background-image: url(images/food-grid-6.jpg);
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+main .menu .menu-grid .grid7 {
+    background-image: url(images/food-grid-7.jpg);
+    grid-column: 4/5;
+    grid-row: 2/4;
+}
+
+main .menu .grid-item{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
-}
-.grid-services .services-container .services:hover {
-    transform: scale(1.1);
-}
-.grid-services .services-container .text {
-    position: absolute;
-    bottom: 3vw;
-    font-size: 1.5vw;
-    color: #ffffff;
-    background-color: #fc4e4e99;
-    padding: 10px 0;
-    /* Text Align Ceneter 1,2*/
-    width: 100%; /*1*/
-    text-align: center; /*2*/
-    font-family: 'Cinzel Decorative', cursiv;
-    font-weight: 800;
-}
-
-.grid-services .services-container .text p {
-    padding: 20px;
-    font-size: 1vw;
-}
-
-.services1 {
-    background-image: url(banners/services2.jpg);
-}
-.services2 {
-    background-image: url(banners/services1.jpeg);
-}
-.services3 {
-    background-image: url(banners/services3.jpeg);
-}
-
-@media screen and (max-width:600px) {
-    .grid-services{
-        display: grid;
-        position: relative;
-        grid-template-columns: 1fr;
-        height: 100vw;
-    }
-
-    .grid-services .services-container{
-        position: relative;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        column-gap: 10px;
-        border-radius: 0;
-        width: 100%;
-        margin: 2vw;
-    }
-
-    .grid-services .services-container .text{
-        position: relative;
-        bottom: 0;
-        text-align: left;
-        padding: 2px;
-        font-size: 0.8rem;
-        line-height: 1.5;
-    }
-    .grid-services .services-container .text p{
-        display: block;
-        padding: 0;
-        font-size: 12px;
-        color: #ffffff90;
-    }
-
-    .grid-services .services-container .text h2 span {
-        display: none;
-    }
-
-    .services {
-        border-radius: 5px;
-    }
-}
-
-
-/* How it Works Section */
-.howitworks {
-    text-align: center;
-}
-.howitworks .howitworks-header {
-    padding: 30px;
-    font-family:  'Cinzel Decorative', cursiv;
-    line-height: 1.8;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-    color: #ff1616;
-}
-.howitworks .howitworks-header h3 {
-    color: #ff16168f;
-}
-.howitworks .howitworksgridsystem{
-    display: flex;
-    justify-content: center;
-    background-color: #fc4e4e;
-    padding: 30px;
-}
-.howitworks .howitworksgridsystem .steps {
-    margin: 15px;
-}
-.howitworks .howitworksgridsystem .steps img{
     position: relative;
-    width: 15vw;
-    height: 15vw;
-    border-radius: 5px;
+    width: 100%;
+
+    transition: 0.5s ease-in-out;
+}
+main .menu .grid-item:hover {
+    transform: scale(1.05);
+    border-radius: 15px;
 }
 
-.howitworks .howitworksgridsystem .steps h4{
-    margin: 10px 0;
-    font-weight: 900;
-    color: #ffffff;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+/* ====================footer=================== */
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+
+
+    padding: 3% 7% 10%;
+    background-color: #FFF0DB;
+    font-family: 'Roboto', sans-serif;
 }
 
-@media screen and (max-width:600px){
+.footer-grid .companylogo a span {
+    position: relative;
+}
 
-    .howitworks .howitworksgridsystem {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        position: relative;
-    }
-    .howitworks .howitworksgridsystem .steps img {
-        width: 40vw;
-        height:40vw;
-    }
+.footer-grid .companylogo a img{
+    width: 4.5rem;
+}
+.footer-grid .contact .social-logo {
+    position: relative;
+}
+.footer-grid .contact .social-logo > img {
+    width: 1.5rem;
+    margin: 5px 5px 5px 0;
+}
 
-    .howitworks .howitworks-header h2{
-        font-size: 1.5rem;
-    }
-    .howitworks .howitworks-header h3{
-        font-size: 0.7rem;
-    }
+.footer-grid .mainlink a , .footer-grid .support a{
+    display:block;
+    text-decoration: none;
+    color: #000000;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.footer-grid h4{
+    color: #565656;
+    margin-bottom: 23px;
+}
+
+.footer-grid .contact input {
+    width: 80%;
+    padding: 2px;
+    font-size: 0.8rem;
+    outline: none;
+}
+
+.footer-grid .contact .followlb {
+    margin-top: 23px;
 }
