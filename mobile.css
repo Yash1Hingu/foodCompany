@@ -1,10 +1,6 @@
 @media screen and (max-width:1000px){
-    nav {
-        padding: 10px 2px;
-    }
-
-    header {
-        padding: 0px 10px;
+    .companylogo a img {
+        width: 3.5rem;
     }
     .dropdown {
         right: 1vw;
@@ -18,9 +14,15 @@
     .hero-section img {
         width: 15rem;
     }
+
+    .hero-section .text h1 {
+        font-size: 60px;
+        letter-spacing: 2px;
+    }
     
     .hero-section .text p{
         width: auto;
+        padding: 0 10px;
     }
 
     .yellow {
@@ -39,6 +41,11 @@
 
     .dropdown {
         margin: 7.5vw;
+    }
+
+    main .menu .menu-grid {
+        width: 90vw;
+        height: 90vw;
     }
 
     .footer-grid {
